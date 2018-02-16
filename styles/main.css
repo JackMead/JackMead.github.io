@@ -1,0 +1,39 @@
+body {
+  background-color: aliceblue;
+  text-align: center;
+}
+.banner {
+  text-decoration: underline;
+  font-size: 75px;
+  text-align: center;
+  height: 100px;
+}
+ol {
+  list-style: circle;
+}
+#footer {
+  border-top: 2px solid black;
+  min-height: 25px;
+  text-justify: distribute-center-last;
+}
+.most-of-the-text {
+  background-color: floralwhite;
+  border: 2px solid black;
+}
+.vertical-flex,
+.horizontal-flex {
+  display: flex;
+  width: 100%;
+}
+.vertical-flex {
+  flex-direction: column;
+}
+.horizontal-flex > * {
+  width: 50%;
+}
+#top {
+  width: 100%;
+}
+#tag-line {
+  font-size: 25px;
+}

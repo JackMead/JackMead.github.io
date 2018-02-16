@@ -1,0 +1,7 @@
+.widget {
+  color: blue;
+}
+.widget div {
+  font-weight: bold;
+  border-color: blue;
+}

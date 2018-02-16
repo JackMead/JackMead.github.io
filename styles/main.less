@@ -1,0 +1,51 @@
+@border-settings :2px solid black;
+@background-color : aliceblue;
+@box-color: floralwhite;
+
+body {
+	background-color: @background-color;
+	text-align: center;
+}
+
+.banner {
+	text-decoration: underline;
+	font-size: 75px;
+	text-align: center;
+	height: 100px;
+}
+
+ol {
+	list-style: circle;
+}
+
+#footer{
+	border-top: @border-settings;
+    min-height:25px;
+    text-align;
+ }
+
+.most-of-the-text{
+	background-color: @box-color;
+	border: @border-settings;
+}
+
+.vertical-flex, .horizontal-flex {
+	display: flex;
+	width: 100%;
+}
+
+.vertical-flex {
+	flex-direction: column;
+}
+
+.horizontal-flex>*{
+	width: 50%;
+}
+
+#top {
+	width: 100%;
+}
+
+#tag-line{
+    font-size: 25px;
+}
