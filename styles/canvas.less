@@ -1,22 +1,35 @@
-@number-per-row:15;
-#paint {
-    flex-wrap: wrap;
-}
+@number-per-row: 25;
+@pixel-border: 1px solid black;
 
-.pixel {
-    /*Below ensures there is space for @number-per-row pixels*/
-    @pixel-size: calc(100%/(@number-per-row+1));
-    @pixel-border: 1px solid black;
-    width: @pixel-size;
-    padding-top: @pixel-size;
-    border: @pixel-border;
-    &:hover{
-        background-color: red;
+#paint {
+    @row-size: 80%;
+    @padding: (100%-@row-size)/2;
+    padding-left: @padding;
+    width: @row-size;
+
+    > #pixel-container {
+        @pixel-size: 100%/(@number-per-row);
+        flex-wrap: wrap;
+        max-width: 1500px;
+        min-width: 400px;
+
+        > .pixel {
+            box-sizing:border-box;
+            width: @pixel-size;
+            padding-top: @pixel-size;
+            border: @pixel-border;
+
+            &:hover {
+                background-color: red;
+            }
+        }
     }
 }
 
 .pixelCheckbox {
     display: none;
+    margin: 0;
+
     &:checked + .pixel {
         background-color: black;
     }

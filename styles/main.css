@@ -1,17 +1,24 @@
 #paint {
-  flex-wrap: wrap;
+  padding-left: 10%;
+  width: 80%;
 }
-.pixel {
-  /*Below ensures there is space for @number-per-row pixels*/
-  width: calc(6.25%);
-  padding-top: calc(6.25%);
+#paint > #pixel-container {
+  flex-wrap: wrap;
+  max-width: 1500px;
+  min-width: 400px;
+}
+#paint > #pixel-container > .pixel {
+  box-sizing: border-box;
+  width: 4%;
+  padding-top: 4%;
   border: 1px solid black;
 }
-.pixel:hover {
+#paint > #pixel-container > .pixel:hover {
   background-color: red;
 }
 .pixelCheckbox {
   display: none;
+  margin: 0;
 }
 .pixelCheckbox:checked + .pixel {
   background-color: black;
@@ -49,6 +56,9 @@ body {
 }
 #description {
   padding: 10px;
+}
+#description > p {
+  width: 100%;
   text-align: center;
 }
 #footer {
