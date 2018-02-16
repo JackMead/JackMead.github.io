@@ -1,0 +1,23 @@
+@number-per-row:15;
+#paint {
+    flex-wrap: wrap;
+}
+
+.pixel {
+    /*Below ensures there is space for @number-per-row pixels*/
+    @pixel-size: calc(100%/(@number-per-row+1));
+    @pixel-border: 1px solid black;
+    width: @pixel-size;
+    padding-top: @pixel-size;
+    border: @pixel-border;
+    &:hover{
+        background-color: red;
+    }
+}
+
+.pixelCheckbox {
+    display: none;
+    &:checked + .pixel {
+        background-color: black;
+    }
+}
