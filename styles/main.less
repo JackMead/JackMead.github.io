@@ -1,6 +1,7 @@
 @border-settings :2px solid black;
 @background-color : aliceblue;
 @box-color: floralwhite;
+@number-per-row: 20;
 
 body {
 	background-color: @background-color;
@@ -14,38 +15,60 @@ body {
 	height: 100px;
 }
 
-ol {
-	list-style: circle;
+
+#tag-line {
+    font-size: 25px;
+}
+
+.most-of-the-text {
+    background-color: @box-color;
+    border: @border-settings;
+}
+
+#description{
+    padding: 10px;
+    text-align: center;
+}
+
+#paint{
+    flex-wrap: wrap;
+}
+
+.pixel {
+    /*hack to try force 5 even boxes per row*/
+    @pixel-size: 98%/@number-per-row;
+    @pixel-border: 1px solid black;
+    width: @pixel-size;
+    padding-top: @pixel-size;
+    border: @pixel-border;
+}
+
+.pixelCheckbox{
+    display: none;
+    &:checked + .pixel{
+        background-color: black;
+    }
 }
 
 #footer{
 	border-top: @border-settings;
     min-height:25px;
-    text-align;
+    text-align: center;
  }
-
-.most-of-the-text{
-	background-color: @box-color;
-	border: @border-settings;
-}
 
 .vertical-flex, .horizontal-flex {
 	display: flex;
 	width: 100%;
 }
 
+.horizontal-flex{
+    flex-direction: row;
+}
+
 .vertical-flex {
 	flex-direction: column;
 }
 
-.horizontal-flex>*{
-	width: 50%;
-}
-
-#top {
-	width: 100%;
-}
-
-#tag-line{
-    font-size: 25px;
+ol {
+    list-style: circle;
 }

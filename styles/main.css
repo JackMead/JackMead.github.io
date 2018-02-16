@@ -8,32 +8,48 @@ body {
   text-align: center;
   height: 100px;
 }
-ol {
-  list-style: circle;
-}
-#footer {
-  border-top: 2px solid black;
-  min-height: 25px;
-  text-justify: distribute-center-last;
+#tag-line {
+  font-size: 25px;
 }
 .most-of-the-text {
   background-color: floralwhite;
   border: 2px solid black;
+}
+#description {
+  padding: 10px;
+  text-align: center;
+}
+#paint {
+  flex-wrap: wrap;
+}
+.pixel {
+  /*hack to try force 5 even boxes per row*/
+  width: 4.9%;
+  padding-top: 4.9%;
+  border: 1px solid black;
+}
+.pixelCheckbox {
+  display: none;
+}
+.pixelCheckbox:checked + .pixel {
+  background-color: black;
+}
+#footer {
+  border-top: 2px solid black;
+  min-height: 25px;
+  text-align: center;
 }
 .vertical-flex,
 .horizontal-flex {
   display: flex;
   width: 100%;
 }
+.horizontal-flex {
+  flex-direction: row;
+}
 .vertical-flex {
   flex-direction: column;
 }
-.horizontal-flex > * {
-  width: 50%;
-}
-#top {
-  width: 100%;
-}
-#tag-line {
-  font-size: 25px;
+ol {
+  list-style: circle;
 }
