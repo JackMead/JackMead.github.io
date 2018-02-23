@@ -9,6 +9,10 @@
 .arrange-children-vertically {
   flex-direction: column;
 }
-ol {
+.center {
+  margin: 0 auto;
+  text-align: left;
+}
+.center ol {
   list-style: circle;
 }

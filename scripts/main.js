@@ -5,6 +5,6 @@ $(document).ready(function(){
     
     for (var i = 0; i < numberPixels; i++) {
         var pixelId = "pixelCheckbox" + i;
-        $("#pixel-container").append("<input type=\"checkbox\" class=\"pixelCheckbox\" id=\""+pixelId+"\"></input><label class=\"pixel\" for=\""+pixelId+"\"></label>");
+        $("#pixel-container").append("<input type=\"checkbox\" class=\"pixel-checkbox\" id=\""+pixelId+"\"></input><label class=\"pixel\" for=\""+pixelId+"\"></label>");
     }
 });

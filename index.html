@@ -16,24 +16,35 @@
         <div class="arrange-children-horizontally">
             <div class="arrange-children-vertically">
                 <p>What could you make?</p>
-                <ol>
-                    <li>A small homage to the website's creator</li>
-                    <li>Your favourite pixelated characters</li>
-                    <li>...There's probably something else</li>
-                </ol>
+                <div class="center">
+                    <ol>
+                        <li>A small homage to the website's creator</li>
+                        <li>Your favourite pixelated characters</li>
+                        <li>...There's probably something else</li>
+                    </ol>
+                </div>
             </div>
             <div class="arrange-children-vertically">
                 <p>Why does this exist?</p>
-                <ol>
-                    <li>I was told to make a website</li>
-                    <li>I wanted to see what I could do with CSS</li>
-                    <li>I was told to play with flexboxes</li>
-                </ol>
+                <div class="center">
+                    <ol>
+                        <li>I was told to make a website</li>
+                        <li>I wanted to see what I could do with CSS</li>
+                        <li>I was told to play with flexboxes</li>
+                    </ol>
+                </div>
             </div>
         </div>
-        <div id="description" class="arrange-children-horizontally"><p>Now unleash your inner child. No more drawing on the wall!</p>
+        <div id="description" class="arrange-children-horizontally">
+            <p>Now unleash your inner child. No more drawing on the wall!</p>
         </div>
         <div id="paint">
+            <input type="radio" name="color" id="black" checked/>
+            <label for="black">Black</label>
+            <input type="radio" name="color" id="red" />
+            <label for="red">Red</label>
+            <input type="radio" name="color" id="blue" />
+            <label for="blue">Blue</label>
             <div id="pixel-container" class="arrange-children-horizontally"></div>
         </div>
         <div id="footer" class="arrange-children-horizontally">

@@ -7,30 +7,48 @@
     padding-left: @padding;
     width: @row-size;
 
-    > #pixel-container {
+    #pixel-container {
         @pixel-size: 100%/(@number-per-row);
         flex-wrap: wrap;
         max-width: 1500px;
         min-width: 400px;
 
         > .pixel {
-            box-sizing:border-box;
+            box-sizing: border-box;
             width: @pixel-size;
             padding-top: @pixel-size;
             border: @pixel-border;
 
             &:hover {
-                background-color: red;
+                background-color: white;
             }
         }
     }
-}
 
-.pixelCheckbox {
-    display: none;
-    margin: 0;
+    .pixel-checkbox {
+        display: none;
+        margin: 0;
+    }
 
-    &:checked + .pixel {
-        background-color: black;
+    #black {
+        .my-color-block(black);
+    }
+
+    #red {
+        .my-color-block(red);
+    }
+
+    #blue {
+        .my-color-block(blue);
+    }
+
+    .my-color-block(@color) {
+        &:checked ~ #pixel-container {
+            > .pixel-checkbox {
+                &:checked + .pixel {
+                    background-color: @color;
+                }
+            }
+        }
     }
 }

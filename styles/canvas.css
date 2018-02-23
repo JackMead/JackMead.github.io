@@ -1,15 +1,31 @@
 #paint {
-  flex-wrap: wrap;
+  padding-left: 10%;
+  width: 80%;
 }
-.pixel {
-  /*Below ensures there is space for @number-per-row pixels*/
-  width: calc(6.25%);
-  padding-top: calc(6.25%);
+#paint #pixel-container {
+  flex-wrap: wrap;
+  max-width: 1500px;
+  min-width: 400px;
+}
+#paint #pixel-container > .pixel {
+  box-sizing: border-box;
+  width: 4%;
+  padding-top: 4%;
   border: 1px solid black;
 }
-.pixelCheckbox {
-  display: none;
+#paint #pixel-container > .pixel:hover {
+  background-color: white;
 }
-.pixelCheckbox:checked + .pixel {
+#paint .pixel-checkbox {
+  display: none;
+  margin: 0;
+}
+#paint #black:checked ~ #pixel-container > .pixel-checkbox:checked + .pixel {
   background-color: black;
+}
+#paint #red:checked ~ #pixel-container > .pixel-checkbox:checked + .pixel {
+  background-color: red;
+}
+#paint #blue:checked ~ #pixel-container > .pixel-checkbox:checked + .pixel {
+  background-color: red;
 }
