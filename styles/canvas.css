@@ -27,5 +27,5 @@
   background-color: red;
 }
 #paint #blue:checked ~ #pixel-container > .pixel-checkbox:checked + .pixel {
-  background-color: red;
+  background-color: blue;
 }
