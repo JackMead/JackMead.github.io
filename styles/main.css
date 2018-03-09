@@ -55,6 +55,8 @@
 body {
   background-color: aliceblue;
   text-align: center;
+  margin: 0 auto;
+  padding: 0;
 }
 .banner {
   text-decoration: underline;
@@ -62,10 +64,21 @@ body {
   text-align: center;
   height: 100px;
 }
+#navbar {
+  background-color: black;
+  width: 100%;
+  font-size: 2em;
+}
+#navbar a:visited,
+#navbar a:link {
+  color: aliceblue;
+  text-decoration: none;
+}
 #tag-line {
   font-size: 25px;
 }
 .main-body {
+  margin: 25px;
   background-color: floralwhite;
   border: 2px solid black;
 }

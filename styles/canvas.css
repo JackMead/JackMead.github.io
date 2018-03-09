@@ -1,8 +1,10 @@
 #paint {
   padding-left: 10%;
+  padding-top: 10px;
   width: 80%;
 }
 #paint #pixel-container {
+  padding-top: 10px;
   flex-wrap: wrap;
   max-width: 1500px;
   min-width: 400px;
