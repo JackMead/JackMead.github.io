@@ -3,10 +3,40 @@ $(document).ready(function () {
     var numberRows = 15;
     var numberPixels = pixelsPerRow * numberRows;
     var outputScale = 10;
+    var keyCodesTyped = 0;
+    var secretCode = [113, 119, 101, 114, 116,121];
 
     for (var i = 0; i < numberPixels; i++) {
         var pixelId = "pixel-checkbox-" + i;
         $("#pixel-container").append("<input type=\"checkbox\" class=\"pixel-checkbox\" id=\"" + pixelId + "\"></input><label class=\"pixel\" for=\"" + pixelId + "\"></label>");
+    }
+
+    $(function () {
+        $(window).keypress(function (e) {
+            var key = e.which;
+            if (key === secretCode[keyCodesTyped]) {
+                keyCodesTyped++;
+                console.log("SEEN!");
+                if (keyCodesTyped === secretCode.length) {
+                    keyCodesTyped = 0;
+                    drawAMessage();
+                }
+            }
+        });
+    });
+
+    function drawAMessage() {
+        //Secret mechanics, do not look
+        var pixelsToColor = [0,2,4,5,6,8,10,14,16,18,20,22,23,24,26,29,31,33,35,39,41,43,45,47,49,51,54,55,56,58,59,60,65,67,70,72,74];
+        pixelsToColor.forEach(pixelId => {
+            pixelId += 125;
+            if (pixelId % 25 < 12) {
+                pixelId++;
+            } else {
+                pixelId--;
+            }
+            $("#pixel-checkbox-" + pixelId).trigger('click');
+        });
     }
 
     $(".btn").click(() => {
